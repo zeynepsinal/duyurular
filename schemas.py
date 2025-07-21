@@ -4,8 +4,8 @@ from datetime import datetime
 class DuyuruCreate(BaseModel):
     baslik: str
     icerik: str
-    saat: str
     yazar: str
+    saat: str
     kategori: str
     is_important: bool
 
