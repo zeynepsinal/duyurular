@@ -12,7 +12,7 @@ class Duyuru(Base):
     baslik = Column(String, nullable=False)
     icerik = Column(Text, nullable=False)
     tarih = Column(DateTime, default=datetime.utcnow)
-    saat = Column(String, default="18:00")
+    saat = Column(String, default="00:00")
     yazar = Column(String, default="Admin")
     kategori = Column(String, default="Genel")
     is_important = Column(Boolean, default=False)

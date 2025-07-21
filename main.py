@@ -59,7 +59,7 @@ def duyurulari_getir(
     if tarih:
         try:
             tarih_dt = datetime.strptime(tarih, "%Y-%m-%d").date()
-            query = query.filter(models.Duyuru.tarih.cast(DateTime).contains(tarih_dt))
+            query = query.filter(models.Duyuru.tarih.cast(datetime).contains(tarih_dt))
         except:
             raise HTTPException(status_code=400, detail="Tarih formatı yanlış.")
 
